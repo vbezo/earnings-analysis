@@ -22,3 +22,7 @@ Request path to earnings PDF
 Process and analyze the document
 Generate a structured credit comment
 Save the analysis to the output folder
+
+
+
+THERE IS ALSO A YNPB FILE TO RUN THE CODE FROM 1 JUPYER NOTEBOOK
