@@ -1,3 +1,25 @@
+# document_handler.py
+from typing import TypedDict, Dict, Optional, List
+from pathlib import Path
+from langchain_openai import ChatOpenAI
+from langchain_community.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+
+# Import or define the state type
+class EarningsAnalysisState(TypedDict):
+    ticker: str
+    industry: str
+    documents: Dict[str, str]
+    document_analysis: Optional[str]
+    financial_analysis: Optional[str]
+    credit_analysis: Optional[str]
+    industry_analysis: Optional[str]
+    final_comment: Optional[str]
+    status: str
+    errors: List[str]
+    
 def industry_expert_agent(state: EarningsAnalysisState) -> EarningsAnalysisState:
     """
     Industry Expert agent that:

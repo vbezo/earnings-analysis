@@ -1,7 +1,7 @@
 from typing import TypedDict, Dict, Optional, List
 from pathlib import Path
 from datetime import datetime
-from langgraph.graph import START, END, StateGraph
+from langgraph.graph import StateGraph
 from langchain_core.messages import HumanMessage
 from IPython.display import Image, display
 
@@ -53,7 +53,7 @@ def create_workflow():
     builder.add_node("summary", summary_agent)
 
     # Add edges
-    builder.add_edge(START, "document_handler")
+    builder.add_edge("__start__", "document_handler")
     builder.add_edge("document_handler", "financial_parser")
 
     # Add conditional edges
