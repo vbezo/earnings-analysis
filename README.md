@@ -26,3 +26,5 @@ Save the analysis to the output folder
 
 
 THERE IS ALSO A YNPB FILE TO RUN THE CODE FROM 1 JUPYER NOTEBOOK
+
+![alt text](image.png)
